@@ -1,7 +1,19 @@
 Hash table:
+    total memory cost: O(N) - each hash table can have at most N entities
+    speed of access: O(1) - on average for a hash table lookup is O(1)
+    difficulty of maintenance: When adding an entity you would have to traverse the linked list and add it at the end. When removing an entity, you would have to traverse the linked list, find the entity to remove, then link the previous entity to the next entity before removing.
 
 Map:
+    total memory cost: O(N)
+    speed of access: O(logN)
+    difficulty of maintenance: removing and adding is both in O(logN)
 
 Sparse mapping 1:
+    total memory cost: O(NK)
+    speed of access: O(1)
+    difficulty of maintenance: removing and adding components is O(1), removing and adding entities is O(K)
 
 Sparse mapping 2:
+    total memory cost: O(NK)
+    speed of access: O(1)
+    difficulty of maintenance: removing and adding components is O(1), removing and adding entities is O(K)
