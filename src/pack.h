@@ -33,7 +33,7 @@ namespace pack_detail{
     constexpr int _packTypeToIndex = -1;
 
     template <int Accumulated, typename QueryType, typename First, typename... Rest>
-    constexpr int _packTypeToIndex<Accumulated, QueryType, First, Rest...> = std::is_same_v<QueryType, First> ?Accumulated : _packTypeToIndex<Accumulated +1, QueryType, Rest...>; //chatGPT helped come up with the ?accumulated synatx
+    constexpr int _packTypeToIndex<Accumulated, QueryType, First, Rest...> = std::is_same_v<QueryType, First> ?Accumulated : _packTypeToIndex<Accumulated +1, QueryType, Rest...>; //chatGPT helped come up with the ?accumulated synatx and save_v
 
     template <typename QueryType, typename... Args>
     constexpr int packTypeToIndex = _packTypeToIndex<0, QueryType, Args...>;
